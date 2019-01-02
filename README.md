@@ -3,30 +3,37 @@
 ```
 http://tsuozoe.pixnet.net/blog/post/21283890-mysql-%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E8%AA%9E%E6%B3%95
 ```
-net start mysql
-啟動 MySQL
 
-查詢資料庫、資料表、欄位等資訊
+# 啟動 MySQL
+```
+net start mysql
+```
+# 查詢資料庫、資料表、欄位等資訊
+```
 mysqlshow [-h ipAddress] -u user_name -p
 mysqlshow -u user_name@ipAddress -p
 列出所有資料庫
-
+```
+# 列出該 database_name 所有資料表
+```
 mysqlshow -u user_name -p db_name
-列出該 database_name 所有資料表
-
+```
+# 列出該 database_name 裡 table_name 資料表裡的欄位
+```
 mysqlshow -u user_name -p db_name table_name
-列出該 database_name 裡 table_name 資料表裡的欄位
-
+```
+# 列出該 database_name 裡 table_name 的 field_name 的欄位資訊
+```
 mysqlshow -u user_name -p db_name table_name field_name
-列出該 database_name 裡 table_name 的 field_name 的欄位資訊
-
-更改密碼
+```
+# 更改密碼:更改目前系統登入使用者的密碼
+```
 mysqladmin password 'new_password'
-更改目前系統登入使用者的密碼
-
-於資料庫中導入執行sql script 檔
+```
+# 於資料庫中導入執行sql script 檔
+```
 mysql db_name < sql_filename.sql
-
+```
 與 MySQL 連線
 mysql [-h ipAddress] -u user_name -ppassword
 mysql [-h ipAddress] -u user_name -p
